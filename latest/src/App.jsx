@@ -3,23 +3,31 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-function App()
-{
+function App(){
 
-function banana() 
-{
-   alert("You Click On Banana")
+function fun(){
+   alert("you click on button")
 }
-                   
-  
- function apple()
- {
-   alert("You Click On Apple")
- }
+const fruit=(name,AP,BN)=>{
+    alert(name,AP,BN)
+}
+let data ="Demo"
+function updata(){
+   data = "Example"
+   alert(data);
+}
+
+
    return(
    <div>
-<button onClick={apple}>Apple</button>
-<button onClick={banana}>Banana</button>
+
+<h1> example of arrow function</h1>
+<button onClick={fun}> Click to call function </button>
+<button onClick={()=>fruit("first Parameter")}> arrow fruit button </button>
+<button onClick={()=>fruit("you click on apple")}> Apple </button>
+<button onClick={()=>fruit("you click on banana")}> Banana </button>
+<h2> {data} </h2>
+<button onClick={updata}> click to change value </button>
 </div>
    )
 
